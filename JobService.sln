@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobService.API", "JobService\JobService.API.csproj", "{3341EA45-6FF0-40C6-8587-E880BF5EE8CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobService.Infra", "JobService.Infra\JobService.Infra.csproj", "{25F222AA-7F4E-4207-A5C1-12F3A0AECC9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobService.Core", "JobService.Core\JobService.Core.csproj", "{A76521C8-72A3-4FEE-BFA0-C5528784366C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobService.Common", "JobService.Common\JobService.Common.csproj", "{C47E65FB-466A-4613-AFC9-51EDC59A9D12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{73FA0A63-D564-4CAA-A0B9-EA849495CAF9}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.tfignore = .tfignore
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobService.Dashboard", "JobService.Dashboard\JobService.Dashboard.csproj", "{6961AAFB-3A30-490C-8DBF-71A3251F1AAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3341EA45-6FF0-40C6-8587-E880BF5EE8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3341EA45-6FF0-40C6-8587-E880BF5EE8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3341EA45-6FF0-40C6-8587-E880BF5EE8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3341EA45-6FF0-40C6-8587-E880BF5EE8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F222AA-7F4E-4207-A5C1-12F3A0AECC9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F222AA-7F4E-4207-A5C1-12F3A0AECC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F222AA-7F4E-4207-A5C1-12F3A0AECC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F222AA-7F4E-4207-A5C1-12F3A0AECC9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A76521C8-72A3-4FEE-BFA0-C5528784366C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76521C8-72A3-4FEE-BFA0-C5528784366C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76521C8-72A3-4FEE-BFA0-C5528784366C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76521C8-72A3-4FEE-BFA0-C5528784366C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C47E65FB-466A-4613-AFC9-51EDC59A9D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47E65FB-466A-4613-AFC9-51EDC59A9D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47E65FB-466A-4613-AFC9-51EDC59A9D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47E65FB-466A-4613-AFC9-51EDC59A9D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6961AAFB-3A30-490C-8DBF-71A3251F1AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6961AAFB-3A30-490C-8DBF-71A3251F1AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6961AAFB-3A30-490C-8DBF-71A3251F1AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6961AAFB-3A30-490C-8DBF-71A3251F1AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72AD3700-87B8-4C8B-BFC3-334E5A7410B8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JobService.API</name>
+    </assembly>
+    <members>
+        <member name="T:JobService.API.Activator.HangfireActivator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JobService.API.Activator.HangfireActivator.#ctor(System.IServiceProvider)">
+            <summary>
+            
+            </summary>
+            <param name="serviceProvider"></param>
+        </member>
+        <member name="M:JobService.API.Activator.HangfireActivator.ActivateJob(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JobService.API.ConfigureSwaggerOptions">
+            <summary>
+            Configures the Swagger generation options.
+            </summary>
+            <remarks>This allows API versioning to define a Swagger document per API version after the
+            <see cref="T:Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider"/> service has been resolved from the service container.</remarks>
+        </member>
+        <member name="M:JobService.API.ConfigureSwaggerOptions.#ctor(Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:JobService.API.ConfigureSwaggerOptions"/> class.
+            </summary>
+            <param name="provider">The <see cref="T:Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider">provider</see> used to generate Swagger documents.</param>
+        </member>
+        <member name="M:JobService.API.ConfigureSwaggerOptions.Configure(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:JobService.API.Filters.HangfireAuthorizationFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JobService.API.Filters.HangfireAuthorizationFilter.Authorize(Hangfire.Dashboard.DashboardContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JobService.API.SwaggerDefaultValues">
+            <summary>
+            Represents the Swagger/Swashbuckle operation filter used to document the implicit API version parameter.
+            </summary>
+            <remarks>This <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter"/> is only required due to bugs in the <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator"/>.
+            Once they are fixed and published, this class can be removed.</remarks>
+        </member>
+        <member name="M:JobService.API.SwaggerDefaultValues.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Applies the filter to the specified operation using the given context.
+            </summary>
+            <param name="operation">The operation to apply the filter to.</param>
+            <param name="context">The current operation filter context.</param>
+        </member>
+        <member name="T:JobService.API.V1.Controllers.JobController">
+            <summary>
+            Trigger jobs using this controller
+            </summary>
+        </member>
+        <member name="M:JobService.API.V1.Controllers.JobController.#ctor(Microsoft.Extensions.Logging.ILogger{JobService.API.V1.Controllers.JobController},JobService.Core.Factories.IJobFactory)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="jobFactory"></param>
+        </member>
+        <member name="M:JobService.API.V1.Controllers.JobController.AddRecurringJobs(JobService.API.V1.Models.JobConfiguration,System.Threading.CancellationToken)">
+            <summary>
+            Add recurring jobs
+            </summary>
+            <param name="jobConfiguration">Batch with Http and Stored Procedure jobs</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JobService.API.V1.Controllers.JobController.AddFireAndForgetJobs(JobService.API.V1.Models.JobConfiguration,System.Threading.CancellationToken)">
+            <summary>
+            Add fire-and-forget jobs
+            </summary>
+            <param name="jobConfiguration">Batch with Http and Stored Procedure jobs</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JobService.API.V1.Controllers.JobController.AddDelayedJobs(JobService.API.V1.Models.JobConfiguration,System.Threading.CancellationToken)">
+            <summary>
+            Add delayed jobs
+            </summary>
+            <param name="jobConfiguration">Batch with Http and Stored Procedure jobs</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JobService.API.V1.Controllers.TagController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JobService.API.V1.Controllers.TagController.#ctor(Microsoft.Extensions.Logging.ILogger{JobService.API.V1.Controllers.JobController},JobService.Core.Agents.IAgent{JobService.Core.Models.HangfireTag})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="tagAgent"></param>
+        </member>
+        <member name="M:JobService.API.V1.Controllers.TagController.GetAll">
+            <summary>
+            Get all tags
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JobService.API.V1.Models.JobConfiguration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:JobService.API.V1.Models.JobConfiguration.HttpJobs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:JobService.API.V1.Models.JobConfiguration.StoredProcedureJobs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:JobService.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JobService.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:JobService.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JobService.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JobService.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{JobService.Startup})">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="P:JobService.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JobService.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:JobService.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider,System.IServiceProvider,Microsoft.AspNetCore.Hosting.IApplicationLifetime)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="provider"></param>
+            <param name="serviceProvider"></param>
+            <param name="lifetime"></param>
+        </member>
+    </members>
+</doc>

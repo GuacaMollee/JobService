@@ -1,0 +1,24 @@
+version: "3"
+services:
+    jobservice:
+        ports:
+            - 8880:80
+            - 8443:443
+        image: "${DTRURL}"
+        environment:
+            GELF:Host: ${GRAYLOG_URL:-localhost}
+            GELF:Port: ${GRAYLOG_PORT:-12201}
+            GELF:LogSource: "JobService"
+            GELF:AdditionalFields:project_name: "JobService"
+            #GELF:AdditionalFields:<some_key>: <some_value>
+            GELF:LogLevel:default:  ${DEFAULT_GRAYLOG_LOGLEVEL:-Information}
+            DatabaseConnectionSettings:DeviceConnection: ${DEVICE_DATABASE_CONNECTION_STRING}
+            DatabaseConnectionSettings:ClientConnection: ${CLIENT_DATABASE_CONNECTION_STRING}
+            DatabaseConnectionSettings:JobTagsConnection: ${JOBTAGS_DATABASE_CONNECTION_STRING}
+            #HangfireConfiguration:Queues:0: "DEFAULT"
+            #HangfireConfiguration:Queues:1: "ExtraQueue"
+            HangfireConfiguration:ServerName:  ${CUSTOMER_NUMBER:-DefaultServer}
+            HangfireConfiguration:ServerTimeout:  ${HANGFIRE_SERVER_TIMEOUT-00:05:00}
+            HangfireConfiguration:WorkerCount:  ${HANGFIRE_WORKER_COUNT:-10}
+            
+        

@@ -1,0 +1,33 @@
+﻿# User-specific files
+*.suo
+*.user
+*.sln.docstates
+*.vspscc
+*.tmp
+
+# Build results
+bin
+obj
+
+# Logging
+log/
+
+#nuget packages directory
+packages
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.Publish.xml
+*.pubxml
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# VS 2015 folder
+.vs
